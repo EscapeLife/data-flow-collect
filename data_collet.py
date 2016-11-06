@@ -8,27 +8,28 @@ import os
 
 def Welcome():
 	print '''
-##################################
-#     weclome, data_collect !    #
-##################################
+********************************************************
+* Author: Escape                                       *
+* Date & Time: 2016-06-20 22:00:00                     *
+* Description: data flow collect                       *
+********************************************************
 '''
 
 
 def Help():
-	print '''
-Option:
-	-init
-		env
-		mysql
-	-catch
-		tcp
-		udp
-		icmp
-	-insert
-		<table name>
-	-look
-		<table name>
-	--help
+    print("Usage: ./data_collet.py [-init [env|mysql] [-catch [tcp|udp|icmp]] [-insert] [-look] [--help]")
+	print("-init")
+	print("     env")
+	print(" 	mysql")
+	print -catch
+	print 	  tcp
+	print 	  udp
+	print 	  icmp
+	print -insert
+	print 	  <table name>
+	print -look
+	print 	  <table name>
+	print --help
 '''
 
 
@@ -75,9 +76,12 @@ def data_collect(sub1, sub2):
 
 if __name__ == '__main__':
 
-	sub1 = sys.argv[1]
-	sub2 = sys.argv[2]
-
-	Welcome()
-	data_collect(sub1, sub2)
+    Welcome()
+    if len(sys.argv) == 2:
+	    sub1 = sys.argv[1]
+	    sub2 = sys.argv[2]
+	    data_collect(sub1, sub2)
+    else:
+        Help()
+        exit(-1)
 
