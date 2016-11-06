@@ -60,9 +60,7 @@ def data_collect(sub1, sub2):
 		sys.exit(0)
 
 
-
-if __name__ == '__main__':
-
+def main():
     Welcome()
     if len(sys.argv) == 3:
 	    sub1 = sys.argv[1]
@@ -71,4 +69,8 @@ if __name__ == '__main__':
     else:
         Help()
         exit(-1)
+
+
+if __name__ == '__main__':
+    main()
 
