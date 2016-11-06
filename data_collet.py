@@ -18,18 +18,18 @@ def Welcome():
 
 def Help():
     print("Usage: ./data_collet.py [-init [env|mysql] [-catch [tcp|udp|icmp]] [-insert] [-look] [--help]")
-	print("-init")
-	print("     env")
-	print(" 	mysql")
-	print -catch
-	print 	  tcp
-	print 	  udp
-	print 	  icmp
-	print -insert
-	print 	  <table name>
-	print -look
-	print 	  <table name>
-	print --help
+    print("-init")
+    print("     env")
+    print(" 	mysql")
+    print("-catch")
+    print("    tcp")
+    print("    udp")
+    print("    icmp")
+    print(" -insert")
+    print("    <table name>")
+    print("-look")
+    print("    <table name>")
+    print("--help")
 '''
 
 
