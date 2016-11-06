@@ -10,6 +10,7 @@
 - **`[date-flow-collect]`**
 - [x] **data_collect.py** - Execute the entry file
  - **`[scripts]`**
+ - [x] **init_env.sh** - Installs MySQLdb database
  - [x] **init_mysqldb.sh** - Installs and creates the required the MySQLdb database and table information
  - [x] **create_db.py** - creates the required the MySQLdb database and table information
  - [x] **catch_packet.py** - Collects data flow information about TCP、UDP、ICMP
