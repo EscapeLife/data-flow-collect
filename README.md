@@ -2,6 +2,7 @@
 
 ![data-flow-collect](./images/index.jpg)
 
+
 ## Description information
 > The project is based on python to achieve TCP, UDP and ICMP data flow reorganization to be able to restore the received TCP, UDP and ICMP content, to restore it.
 
@@ -12,19 +13,19 @@
 (1) Detection of data packets When receiving a data packet, the first correctness check, such as TCP packet header is
 complete, TCP data length is less than 0, the source address and destination address is 0 and so on. If it is correct, then the next step, otherwise this packet will be discarded. 
 
-(2) Analysis of data packets 
+(2) Analysis of data packets
 
-**[Method 1]** 
+**[Method 1]**
 - a. For each tcp packet, the packet's source address, destination address, source port number, destination port number out in the reloading of the table to find a vertical list There is no match with it linked list exists, if so, put the packet into the same socket with it in the chain, into the linked list, the first to find the sequence number in the list in the appropriate location, and then into ; If not, then in the creation of a new type of chain head node, and then put it in the newly created list. 
 
 - b. Whenever a data segment in the chain, I check the data segment in the list has been in place, if it is, will be linked to all data segments of the data part of the stitching together, the application layer Message, and then release the list, and then repeat 1-2 steps; if not, repeat 1-2 steps directly. 
 
 **[Method 2]**
-- a. using python's third-party modules libpcap and dpkt to achieve. 
+- a. Using python's third-party modules libpcap and dpkt to achieve.
 
 (3) Data storage data need to have stored media, you can not use the cache, because the computer's cache is not reliable, so here the use of mysql database on the analysis of data storage. In the database, the need to create tables and indexes for data storage and extraction. 
 
-(4) Data reorganization through a certain method of data reorganization. 
+(4) Data reorganization through a certain method of data reorganization.
 
 (5) Data display The display of data obtained by using a web browser is performed.
 
@@ -56,3 +57,4 @@ complete, TCP data length is less than 0, the source address and destination add
 
 ## Show results
 ![results](./images/results.png)
+
