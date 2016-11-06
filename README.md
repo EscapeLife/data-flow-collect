@@ -7,9 +7,9 @@
 
 
 ## Scripts list
-- **date-flow-collect**
+- `**date-flow-collect**`
 - [x] data_collect.py - Execute the entry file
- - **scripts**
+ - `**scripts**`
  - [x] init_mysqldb.sh - Automatically installs and creates the required the MySQLdb database and table information
  - [x] create_db.py - creates the required the MySQLdb database and table information
  - [x] catch_packet.py - Collects data flow information about TCP、UDP、ICMP
