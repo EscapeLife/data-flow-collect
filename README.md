@@ -6,33 +6,6 @@
 > The project is based on python to achieve TCP, UDP and ICMP data flow reorganization to be able to restore the received TCP, UDP and ICMP content, to restore it.
 
 
-## Scripts list
-- **`[date-flow-collect]`**
-- [x] **data_collect.py** - Execute the entry file
- - **`[scripts]`**
- - [x] **init_env.sh** - Installs MySQLdb database
- - [x] **init_mysqldb.sh** - Installs and creates the required the MySQLdb database and table information
- - [x] **create_db.py** - creates the required the MySQLdb database and table information
- - [x] **catch_packet.py** - Collects data flow information about TCP、UDP、ICMP
- - [x] **insert_to_mysql.py** - The information collected into the database for preservation
- - [x] **print_data.py** - Print data flow information, more IP protocol id value to sort
- - **`[install_packages]`**
- - [x] **MySQL-python-1.2.3.zip** - pymysql
- - [x] **pylibpcap-0.6.4.zip** - pylibpcap
-- [x] **LICENSE** - Apache License
-- [x] **README.md** - readme.md
-
-
-## Basic knowledge preparation
-![TCP-IP.png](./images/TCP-IP.png)
-
-![IP.png](./images/IP.png)
-
-![TCP.png](./images/TCP.png)
-
-![UDP.png](./images/UDP.png)
-
-
 ## Work ideas and programs
 > The basic understanding of this architecture, the gateway to collect LAN data in the PC, python script processing, and then stored with the database, the browser displays the data to the user to view. 
 > 1. Detection of data packets When receiving a data packet, the first correctness check, such as TCP packet header is complete, TCP data length is less than 0, the source address and destination address is 0 and so on. If it is correct, then the next step, otherwise this packet will be discarded. 
@@ -51,24 +24,33 @@
 ![data_collect_jiegou](./images/data_collect_jiegou.png)
 
 
+## Scripts list
+- **`[date-flow-collect]`**
+- [x] **data_collect.py** - Execute the entry file
+ - **`[scripts]`**
+ - [x] **init_env.sh** - Installs MySQLdb database
+ - [x] **init_mysqldb.sh** - Installs and creates the required the MySQLdb database and table information
+ - [x] **create_db.py** - creates the required the MySQLdb database and table information
+ - [x] **catch_packet.py** - Collects data flow information about TCP、UDP、ICMP
+ - [x] **insert_to_mysql.py** - The information collected into the database for preservation
+ - [x] **print_data.py** - Print data flow information, more IP protocol id value to sort
+ - **`[install_packages]`**
+ - [x] **MySQL-python-1.2.3.zip** - pymysql
+ - [x] **pylibpcap-0.6.4.zip** - pylibpcap
+- [x] **LICENSE** - Apache License
+- [x] **README.md** - readme.md
+
+
 ## Show results
 ![results](./images/results.png)
 
 
+## Basic knowledge preparation
+![TCP-IP.png](./images/TCP-IP.png)
 
+![IP.png](./images/IP.png)
 
+![TCP.png](./images/TCP.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![UDP.png](./images/UDP.png)
 
