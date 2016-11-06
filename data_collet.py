@@ -17,20 +17,7 @@ def Welcome():
 
 
 def Help():
-    print("Usage: ./data_collet.py [-init [env|mysql] [-catch [tcp|udp|icmp]] [-insert] [-look] [--help]")
-    print("-init")
-    print("     env")
-    print(" 	mysql")
-    print("-catch")
-    print("    tcp")
-    print("    udp")
-    print("    icmp")
-    print(" -insert")
-    print("    <table name>")
-    print("-look")
-    print("    <table name>")
-    print("--help")
-'''
+    print("Usage: ./data_collet.py [-init [env|mysql] [-catch [tcp|udp|icmp]] [-insert <tablesname>] [-look <tablesname>] [--help]")
 
 
 def data_collect(sub1, sub2):
@@ -77,7 +64,7 @@ def data_collect(sub1, sub2):
 if __name__ == '__main__':
 
     Welcome()
-    if len(sys.argv) == 2:
+    if len(sys.argv) == 3:
 	    sub1 = sys.argv[1]
 	    sub2 = sys.argv[2]
 	    data_collect(sub1, sub2)
