@@ -35,32 +35,32 @@ Option:
 def data_collect(sub1, sub2):
 	if sub1 == '-init':
 		if sub2 == 'env':
-			print os.popen('bash ./init_mysqldb.sh').read()
+			print os.popen('bash ./scripts/init_mysqldb.sh').read()
 		elif sub2 == 'mysql':
-			print os.popen('bash ./init_mysqldb.sh').read()
-			print os.popen('python ./create_db.py').read()
+			print os.popen('bash ./scripts/init_mysqldb.sh').read()
+			print os.popen('python ./scripts/create_db.py').read()
 		else:
 			print "Please thinking agina"
 			sys.exit(0)
 	elif sub1 == '-catch':
 		if sub2 == 'tcp':
 			print "Please press Ctrl+C end the project..."
-			print os.popen('python ./catch_packet.py eth0 tcp > ./tmp.txt').read()
+			print os.popen('python ./scripts/catch_packet.py eth0 tcp > ./tmp.txt').read()
 		elif sub2 == 'udp':
 			print "Please press Ctrl+C end the project..."
-			print os.popen('python ./catch_packet.py eth0 udp > ./tmp.txt').read()
+			print os.popen('python ./scripts/catch_packet.py eth0 udp > ./tmp.txt').read()
 		elif sub2 == 'icmp':
 			print "Please press Ctrl+C end the project..."
-			print os.popen('python ./catch_packet.py eth0 icmp > ./tmp.txt').read()
+			print os.popen('python ./scripts/catch_packet.py eth0 icmp > ./tmp.txt').read()
 		else:
 			print "Please thinking agina"
 			sys.exit(0)
 	elif sub1 == '-insert':
 		if sub2:
-			print os.popen('python ./insert_to_mysql.py '+sub2+'').read()
+			print os.popen('python ./scripts/insert_to_mysql.py '+sub2+'').read()
 	elif sub1 == '-look':
 		if sub2:
-			print os.popen('python ./print_data.py '+sub2+'').read()
+			print os.popen('python ./scripts/print_data.py '+sub2+'').read()
 		else:
 			print "Please thinking agina"
 			sys.exit(0)
