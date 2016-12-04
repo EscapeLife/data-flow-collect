@@ -62,7 +62,7 @@ def print_packet(pktlen, data, timestamp):
 
 if __name__=='__main__':
     if len(sys.argv) < 3:
-        print 'usage: sniff.py <interface> <expr>'
+        print 'usage: catch_packet.py <interface> <expr>'
         sys.exit(0)
 
     p = pcap.pcapObject()
