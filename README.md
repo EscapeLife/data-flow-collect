@@ -1,6 +1,6 @@
 # data-flow-collect
 
-![data-flow-collect](./images/index.jpg)
+![data-flow-collect](./images/index.png)
 
 
 ## Description information
